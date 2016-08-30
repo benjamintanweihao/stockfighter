@@ -62,7 +62,7 @@ defmodule Stockfighter.Api do
   # Private Functions #
   #####################
 
-  defp url(endpoint \\ "") do
+  defp url(endpoint) do
     "https://api.stockfighter.io/ob/api" <> endpoint
   end
 

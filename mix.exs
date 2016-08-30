@@ -10,8 +10,16 @@ defmodule Stockfighter.Mixfile do
      deps: deps()]
   end
 
+  # NOTE: Change me! [trading_account, venue, stock]
+  @args [
+    "ISB30442975",
+    "GMHKEX",
+    "ESCM"
+  ]
+
   def application do
-    [applications: [:logger, :httpoison]]
+    [applications: [:logger, :httpoison],
+     mod: {Stockfighter, @args}]
   end
 
   defp deps do
